@@ -4,6 +4,8 @@ import io.qameta.allure.Step;
 
 import java.math.BigDecimal;
 
+import java.math.RoundingMode;
+
 /**
  * Created by alpa on 10/17/19
  */
@@ -13,7 +15,8 @@ public class DistanceConverter {
     public double metersToInches(double meters) {
 //        TODO implements result
         double result = meters * 100 / 2.54;
-        return result;
+        String formattedResult = String.format("%.2f", result);
+        return Double.valueOf(formattedResult);
     }
 
     @Step
