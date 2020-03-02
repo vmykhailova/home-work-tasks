@@ -32,7 +32,7 @@ public class ConverterTestTask {
         assertEquals(temperatureConverter.celsiusToKelvin(10), expectedResult);
     }
 
-    @Test
+      @Test
     public void metersToInchesTest() {
         double expectedResult = 196.85;
         assertEquals(distanceConverter.metersToInches(5), expectedResult);
@@ -41,7 +41,7 @@ public class ConverterTestTask {
     @Test
     public void inchesToMetersTest() {
         double expectedResult = 1.27000254000508;
-        assertEquals(distanceConverter.inchesToMeters(50), expectedResult);
+        assertEquals(distanceConverter.inchesToMeters(50d), expectedResult);
     }
 
     @Test
