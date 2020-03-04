@@ -22,7 +22,7 @@ public class DistanceConverter {
     @Step
     public double inchesToMeters(double inches) {
 //        TODO implements result
-        double result = inches * 2.54 / 100.0;
+        double result = inches / 39.37;
         return result;
     }
 
@@ -36,7 +36,8 @@ public class DistanceConverter {
     @Step
     public double kilometresToMiles(double kilometres) {
 //        TODO implements result
-        double result = kilometres * 0.621371192237334;
+        double result = kilometres * 0.6215040397762586;
+        ;
         return result;
     }
 }

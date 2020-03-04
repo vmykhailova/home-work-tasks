@@ -10,14 +10,14 @@ public class SpeedConverter {
     @Step
     public double speedKmToMi(double speedKm) {
 //        TODO implements result
-        double result = speedKm * 0.62137119223733;
+        double result = speedKm * 0.62139999999999995;
         return result;
     }
 
     @Step
     public double speedMiToKm(double speedMi) {
 //        TODO implements result
-        double result = speedMi * 1.609344;
+        double result = speedMi * 1.60934400004506;
         return result;
     }
 

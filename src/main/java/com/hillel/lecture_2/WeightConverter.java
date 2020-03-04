@@ -10,7 +10,7 @@ public class WeightConverter {
     @Step
     public double kilogramsToPounds(double kilograms) {
 //        TODO implements result
-        double result = kilograms * 2.2046;
+        double result = kilograms * 2.20462;
         return result;
     }
 

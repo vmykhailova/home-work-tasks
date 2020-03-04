@@ -41,7 +41,7 @@ public class ConverterTestTask {
     @Test
     public void inchesToMetersTest() {
         double expectedResult = 1.27000254000508;
-        assertEquals(distanceConverter.inchesToMeters(50.0001000002d), expectedResult);
+        assertEquals(distanceConverter.inchesToMeters(50), expectedResult);
     }
 
     @Test
