@@ -22,7 +22,7 @@ public class Formulas {
 
     @Step
     public double calculate10Formula(double x) {
-        double result = 1.0 / 3.0 * ((Math.sqrt(Math.abs(Math.sin(x)))) * (Math.cbrt(Math.pow(Math.E, 0.12 * x))));
+        double result = 1.0 / 3.0 * (Math.sqrt(Math.abs(Math.sin(x)))) * (Math.cbrt(Math.pow(Math.E, 0.12 * x)));
 //        TODO implement formula 10
         return result;
     }
