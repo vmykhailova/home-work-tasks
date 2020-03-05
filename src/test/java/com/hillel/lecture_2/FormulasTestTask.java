@@ -20,7 +20,7 @@ public class FormulasTestTask {
 
     @Test
     public void formula10Test() {
-        double x = 26;
+        double x =  26;
         double expectedResult = 0.8235340789142294;
         assertEquals(formulas.calculate10Formula(x), expectedResult);
     }
