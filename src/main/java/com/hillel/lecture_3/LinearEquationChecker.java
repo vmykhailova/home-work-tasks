@@ -13,6 +13,13 @@ public class LinearEquationChecker {
 //        TODO implements result
         int result = 0;
 
+        if (a == 0) {
+            System.out.println("no solution");
+        } else if (b == 0) {
+            System.out.println("x = 0");
+        } else
+            result = + - b / a;
+
         return result;
     }
 }

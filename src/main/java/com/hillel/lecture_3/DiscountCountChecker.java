@@ -10,8 +10,14 @@ public class DiscountCountChecker {
     @Step
     public double checkDiscountCount(double price) {
 
-//        TODO implements result
         double result = 0.0;
+        if (price > 1000.0) {
+            result = (price - (price * 0.15));
+            System.out.println("the sum is " + result);
+
+        } else {
+            System.out.println("no discount");
+        }
 
         return result;
     }

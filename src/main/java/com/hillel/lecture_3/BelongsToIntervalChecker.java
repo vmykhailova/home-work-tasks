@@ -12,6 +12,12 @@ public class BelongsToIntervalChecker {
 
         String result = "";
 
+        if (number >= from && number <= to) {
+            result = "Number " + number + " belong to interval [" + from + ";" + to + "]";
+        } else {
+            result = "Number " + number + " not belong to interval [" + from + ";" + to + "]";
+        }
+
         return result;
     }
 }
