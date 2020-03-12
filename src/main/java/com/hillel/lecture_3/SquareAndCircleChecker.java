@@ -32,10 +32,9 @@ public class SquareAndCircleChecker {
         String result = "";
 
         double diametr = ((Math.sqrt(circleArea / Math.PI)) * 2);
-        double diagonal = squareArea * Math.sqrt(2);
-        System.out.println(diametr);
-        System.out.println(diagonal);
-        if (diagonal < diametr) {
+        double diagonal = Math.sqrt(2 * squareArea);
+
+        if (diagonal <= diametr) {
             result = "The square is in the circle";
         } else {
             result = "The square is not in the circle";
