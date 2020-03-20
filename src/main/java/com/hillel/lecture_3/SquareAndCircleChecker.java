@@ -13,8 +13,8 @@ public class SquareAndCircleChecker {
 //        TODO implements result
         String result = "";
 
-        double diametr = (Math.sqrt(circleArea / Math.PI)) * 2;
-        double side = Math.sqrt(squareArea);
+        double diametr =  getDiametr(circleArea);
+        double side = getSide(squareArea);
 
         if (diametr < side) {
             result = "The circle is in the square";
@@ -25,14 +25,16 @@ public class SquareAndCircleChecker {
         return result;
     }
 
+
+
     @Step
     public String checkSquareInCircle(double circleArea, double squareArea) {
 
 //        TODO implements result
         String result = "";
 
-        double diametr = ((Math.sqrt(circleArea / Math.PI)) * 2);
-        double diagonal = Math.sqrt(2 * squareArea);
+        double diametr =  getDiametr(circleArea);
+        double diagonal = getDiagonal(squareArea);
 
         if (diagonal <= diametr) {
             result = "The square is in the circle";
@@ -41,6 +43,22 @@ public class SquareAndCircleChecker {
         }
 
         return result;
+    }
+
+    public double getDiametr(double circleArea) {
+
+        return (Math.sqrt(circleArea / Math.PI)) * 2;
+    }
+
+
+    public double getSide(double squareArea) {
+
+        return Math.sqrt(squareArea);
+    }
+
+    public double getDiagonal(double squareArea) {
+
+        return Math.sqrt(2 * squareArea);
     }
 
 }

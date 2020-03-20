@@ -10,16 +10,19 @@ public class ReverseStringChecker {
     @Step
     public String getReversString(String value) {
 
-        String result = "";
+        return getRevertsArray(value);
+    }
+
+    public String getRevertsArray (String value) {
 
         char[] arr = value.toCharArray();
-
+        String rev = "";
 
         for (int i = arr.length - 1; i >= 0; i--) {
-            result+=arr[i];
+            rev +=arr[i];
         }
+        return rev;
 
-        return result;
     }
 }
 

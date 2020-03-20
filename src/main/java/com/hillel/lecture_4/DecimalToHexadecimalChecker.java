@@ -21,12 +21,14 @@ public class DecimalToHexadecimalChecker {
 
     @Step
     public int fromHexadecimalToDecimal(String value) {
-
-//        TODO implements result
-        int result = 0;
-
-        result = Integer.parseInt(String.valueOf(value),16);
-
-        return result;
+        String digits = "0123456789ABCDEF";
+        value = value.toUpperCase();
+        int val = 0;
+        for (int i = 0; i < value.length(); i++) {
+            char c = value.charAt(i);
+            int d = digits.indexOf(c);
+            val = 16*val + d;
+        }
+        return val;
     }
 }

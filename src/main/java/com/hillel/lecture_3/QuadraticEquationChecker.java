@@ -12,7 +12,7 @@ public class QuadraticEquationChecker {
 //        TODO implements result
         String result = "";
 
-        double discr = (Math.pow(b, 2) - (4 * a * c));
+        double discr = getDiscriminant(a, b, c);
         if (discr < 0) {
             result = "No roots on the set of real numbers!";
         }
@@ -31,6 +31,11 @@ public class QuadraticEquationChecker {
             result = "The 'a' coefficient should not be zero!";
         }
         return result;
+    }
+
+    public double getDiscriminant(double a, double b, double c) {
+
+        return (Math.pow(b, 2) - (4 * a * c));
     }
 
 }

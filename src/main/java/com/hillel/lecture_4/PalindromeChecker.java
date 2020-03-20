@@ -8,23 +8,36 @@ import io.qameta.allure.Step;
 public class PalindromeChecker {
 
     @Step
-    public boolean isPalindrome(String value) {
+    public static boolean isPalindrome(String value) {
 
-        boolean result = true;
-
-        StringBuilder stringBuilder = new StringBuilder(value);
-        stringBuilder.reverse();
         char[] arr = value.toCharArray();
-        char[] arr2 = stringBuilder.toString().toCharArray();
-
-        for (int j = 0; j < arr.length; j++) {
-            if (arr2[j] != arr[j]) {
-                result = false;
-                break;
-            }
-        }
+        char[] arr2 = arreyRevers(arr);
+        boolean result = isPalendrom (arr, arr2);
 
         return result;
     }
+
+    public static boolean isPalendrom (char[] arr, char[] arr2) {
+
+        for (int j = 0; j < arr.length; j++) {
+            if (arr2[j] != arr[j]) {
+            return false;
+            }
+        }
+        return true;
+
+    }
+
+    public static char[] arreyRevers(char[] arr) {
+
+        char[] arr2 = new char[arr.length];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr2[i] = arr[arr.length - 1 - i];
+
+        }
+        return arr2;
+    }
 }
+
 

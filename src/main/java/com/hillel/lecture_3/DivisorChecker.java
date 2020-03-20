@@ -13,11 +13,20 @@ public class DivisorChecker {
         String result = "";
 
         if (divisor % number == 0) {
-            result = "The number " + number + " is divisor of the number " + divisor;
+            result = getPositiveAnswer (number, divisor);
         } else {
-            result = "The number " + number + " is not divisor of the number " + divisor;
+            result = getNegativeveAnswer (number, divisor);
         }
 
         return result;
     }
+
+    public String getPositiveAnswer (int number, int divisor) {
+        return "The number " + number + " is divisor of the number " + divisor;
+    }
+
+    public String getNegativeveAnswer (int number, int divisor) {
+        return  "The number " + number + " is not divisor of the number " + divisor;
+    }
+
 }

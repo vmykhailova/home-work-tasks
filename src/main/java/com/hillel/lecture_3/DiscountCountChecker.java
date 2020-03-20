@@ -11,7 +11,7 @@ public class DiscountCountChecker {
     public double checkDiscountCount(double price) {
 
         double result = 0.0;
-        if (price > 1000.0) {
+        if (isDiscount(price)) {
             result = (price - (price * 0.15));
             System.out.println("the sum is " + result);
 
@@ -21,4 +21,13 @@ public class DiscountCountChecker {
 
         return result;
     }
+
+    public boolean isDiscount (double price) {
+
+        if (price > 1000.0) {
+            return true;
+        }
+        return false;
+    }
+
 }
