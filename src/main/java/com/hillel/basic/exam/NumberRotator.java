@@ -18,6 +18,13 @@ package com.hillel.basic.exam;
 public class NumberRotator {
 
     public static long rotate(long n) {
+
+        int number = 0;
+        for (int i = 0; i < n; i++) {
+
+            
+        }
+
         return 0;
     }
 }

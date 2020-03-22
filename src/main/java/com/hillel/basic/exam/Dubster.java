@@ -26,6 +26,16 @@ package com.hillel.basic.exam;
 public class Dubster {
 
     public static String songDecoder(String song) {
-        return null;
+
+        String subs = "WUB";
+        String newSong = song.replaceAll(subs, " ");
+
+
+        newSong = newSong.trim();
+        while (newSong.contains("  ")) {
+            newSong = newSong.replace("  ", " ");
+        }
+        return newSong;
     }
+
 }
