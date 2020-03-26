@@ -30,9 +30,21 @@ public class UpperLowerCaseChecker {
     public String eachSentenceToUpperCase(String sentence) {
 
         String result = "";
+        String newSentence = sentence.substring(0,1).toUpperCase()+sentence.substring(1);
+        String [] subStr;
+        String delimiter = "\\.";
+        subStr = newSentence.split(delimiter);
 
-
-
+        for (int i = 0; i < subStr.length; i++) {
+            subStr[i] = subStr[i].trim();
+            String firstLetter = subStr[i].substring(0,1).toUpperCase();
+            String sen = firstLetter+subStr[i].substring(1);
+            result = result + sen + ". ";
+        }
+        result = result.trim();
+        if(sentence.charAt(sentence.length()-1) != '.'){
+            result = result.replaceFirst(".$","");;
+        }
         return result;
     }
 

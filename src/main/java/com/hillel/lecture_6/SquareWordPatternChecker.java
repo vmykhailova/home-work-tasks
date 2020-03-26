@@ -10,30 +10,23 @@ public class SquareWordPatternChecker {
 
     @Step
     public String applySquareWordPattern(String word) {
-        char [] chars = word.toCharArray();
-       String result = "";
-        String tempWord = "";
-        for(int j =0; j<chars.length;j++){
-        char [] arr = shift(chars);
+        String result = word + ", ";
+        char[] chars = word.toCharArray();
 
-        for(int i =0; i<arr.length;i++){
-            tempWord += arr[i];
+        for (int i = 0; i < word.length() - 1; i++) {
+
+            char temp = chars[0];
+            for (int j = 0; j < chars.length - 1; j++) {
+                chars[j] = chars[j + 1];
+            }
+            chars[chars.length - 1] = temp;
+            for (int q = 0; q < chars.length; q++) {
+                result += chars[q];
+            }
+            result = result + ", ";
         }
-        result+=tempWord;
-        }
+        result = result.substring(0, result.length() - 2);
+
         return result;
     }
-
-    public static char[] shift (char[] chars){
-
-
-        char[] newChars = new char[chars.length];
-
-        newChars[0] = chars[chars.length - 1];
-        System.arraycopy(chars, 0, newChars, 1, chars.length - 1);
-
-            return newChars;
-    }
-
-
 }
