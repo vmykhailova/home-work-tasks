@@ -30,51 +30,46 @@ public class FractionNumbers {
         this.denominator = denominator;
     }
 
-    public static FractionNumbers multiply(FractionNumbers first, FractionNumbers second) {
-        FractionNumbers result = new FractionNumbers(0, 1);
+    public  FractionNumbers multiply(FractionNumbers fraction) {
+        this.setNumerator(this.getNumerator() * fraction.getNumerator());
+        this.setDenominator(this.getDenominator() * fraction.getDenominator());
 
-        result.setNumerator(first.getNumerator() * second.getNumerator());
-        result.setDenominator(first.getDenominator() * second.getDenominator());
-
-        return result;
+        return this;
     }
 
-    public static FractionNumbers divide(FractionNumbers first, FractionNumbers second) {
-        FractionNumbers result = new FractionNumbers(0, 1);
+    public FractionNumbers divide(FractionNumbers fraction) {
 
-        result.setNumerator(first.getNumerator() * second.getDenominator());
-        result.setDenominator(first.getDenominator() * second.getNumerator());
+        this.setNumerator(this.getNumerator() * fraction.getDenominator());
+        this.setDenominator(this.getDenominator() * fraction.getNumerator());
 
-        return result;
+        return this;
 
     }
 
-    public static FractionNumbers plus(FractionNumbers first, FractionNumbers second) {
-        FractionNumbers result = new FractionNumbers(0, 1);
+    public FractionNumbers plus(FractionNumbers fraction) {
 
-        if (first.getDenominator() == second.getDenominator()) {
-            result.setNumerator(first.getNumerator() + second.getNumerator());
-            result.setDenominator(first.getDenominator());
-            return result;
+        if (this.getDenominator() == fraction.getDenominator()) {
+            this.setNumerator(this.getNumerator() + fraction.getNumerator());
+            this.setDenominator(this.getDenominator());
+            return this;
         }
 
-        result.setNumerator((first.getNumerator() * second.getDenominator()) + (second.getNumerator() * first.getDenominator()));
-        result.setDenominator(first.getDenominator() * second.getDenominator());
-        return result;
+        this.setNumerator((this.getNumerator() * fraction.getDenominator()) + (fraction.getNumerator() * this.getDenominator()));
+        this.setDenominator(this.getDenominator() * fraction.getDenominator());
+        return this;
     }
 
-    public static FractionNumbers minus(FractionNumbers first, FractionNumbers second) {
-        FractionNumbers result = new FractionNumbers(0, 1);
+    public FractionNumbers minus(FractionNumbers fraction) {
 
-        if (first.getDenominator() == second.getDenominator()) {
-            result.setNumerator(first.getNumerator() - second.getNumerator());
-            result.setDenominator(first.getDenominator());
-            return result;
+        if (this.getDenominator() == fraction.getDenominator()) {
+            this.setNumerator(this.getNumerator() - fraction.getNumerator());
+            this.setDenominator(this.getDenominator());
+            return this;
         }
 
-        result.setNumerator((first.getNumerator() * second.getDenominator()) - (second.getNumerator() * first.getDenominator()));
-        result.setDenominator(first.getDenominator() * second.getDenominator());
-        return result;
+        this.setNumerator((this.getNumerator() * fraction.getDenominator()) - (fraction.getNumerator() * this.getDenominator()));
+        this.setDenominator(this.getDenominator() * fraction.getDenominator());
+        return this;
     }
 
     public String toString() {
