@@ -5,36 +5,36 @@ public class MainConverter {
     public static void main(String[] args) {
 
         CelsiusToFahrenheit celsiusToFahrenheit = new CelsiusToFahrenheit();
-        System.out.println(celsiusToFahrenheit.doubleConvert(10.0, celsiusToFahrenheit.CELSIUSTOFAHRENHEIT));
+        System.out.println(celsiusToFahrenheit.doubleConvert(10.0));
 
         CelsiusToKelvin celsiusToKelvin = new CelsiusToKelvin();
-        System.out.println(celsiusToKelvin.doubleConvert(10.0, celsiusToKelvin.CELSIUSTOKELVIN));
+        System.out.println(celsiusToKelvin.doubleConvert(10.0));
 
         FahrenheitToCelsius fahrenheitToCelsius = new FahrenheitToCelsius();
-        System.out.println(fahrenheitToCelsius.doubleConvert(50.0, fahrenheitToCelsius.FAHRENHEITTOCELSIUST));
+        System.out.println(fahrenheitToCelsius.doubleConvert(50.0));
 
         InchesToMeters inchesToMeters = new InchesToMeters();
-        System.out.println(inchesToMeters.doubleConvert(50.0, inchesToMeters.INCHESTOMETERS));
+        System.out.println(inchesToMeters.doubleConvert(50.0));
 
         KilogramsToPounds kilogramsToPounds = new KilogramsToPounds();
-        System.out.println(kilogramsToPounds.doubleConvert(10.0, kilogramsToPounds.KILOGRAMSTOPOUNDS));
+        System.out.println(kilogramsToPounds.doubleConvert(10.0));
 
         KilometresToMiles kilometresToMiles = new KilometresToMiles();
-        System.out.println(kilometresToMiles.doubleConvert(10.0, kilometresToMiles.KILOMETERSTOMILES));
+        System.out.println(kilometresToMiles.doubleConvert(10.0));
 
         MetersToInches metersToInches = new MetersToInches();
-        System.out.println(metersToInches.doubleConvert(5.0, metersToInches.METERSTOINCHES));
+        System.out.println(metersToInches.doubleConvert(5.0));
 
         MilesToKilometres milesToKilometres = new MilesToKilometres();
-        System.out.println(milesToKilometres.doubleConvert(10.0, milesToKilometres.MILESTOKILOMETERS));
+        System.out.println(milesToKilometres.doubleConvert(10.0));
 
         PoundsToKilograms poundsToKilograms = new PoundsToKilograms();
-        System.out.println(poundsToKilograms.doubleConvert(25.0, poundsToKilograms.POUNDSTOKILOGRAMS));
+        System.out.println(poundsToKilograms.doubleConvert(25.0));
 
         SpeedKmToMi speedKmToMi = new SpeedKmToMi();
-        System.out.println(speedKmToMi.doubleConvert(10.0, speedKmToMi.SPEEDKMTOMI));
+        System.out.println(speedKmToMi.doubleConvert(10.0));
 
         SpeedMiToKm speedMiToKm = new SpeedMiToKm();
-        System.out.println(speedMiToKm.doubleConvert(10.0, speedMiToKm.SPEEDMITOKM));
+        System.out.println(speedMiToKm.doubleConvert(10.0));
     }
 }
