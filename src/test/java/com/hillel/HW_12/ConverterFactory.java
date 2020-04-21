@@ -2,11 +2,6 @@ package com.hillel.HW_12;
 
 public class ConverterFactory {
 
-//    ConverterType type;
-//
-//    public ConverterFactory(ConverterType type){
-//        this.type = type;
-//    }
 
     public IConverter createConverter (ConverterType type) throws ConverterNotExistsException {
         IConverter converter = null;

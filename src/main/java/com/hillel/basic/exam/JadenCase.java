@@ -18,24 +18,15 @@ package com.hillel.basic.exam;
 public class JadenCase {
 
     public String toJadenCase(String phrase) {
-
-        String messageError = "Must return null when the arg is null";
-        if (phrase == null || phrase == "") {
-            System.out.println(messageError);
-            return null;
-        }
-
-        String result = "";
-        String s2 = phrase.substring(0, 1).toUpperCase();
-        for(int i = 1;i<phrase.length(); i++){
-            if (" ".equals(phrase.substring(i-1,i))){
-                s2+=phrase.substring(i,i+1).toUpperCase();
-            } else {
-                s2+=phrase.substring(i,i+1);
+        String result;
+        if (phrase != null && !phrase.isEmpty()) {
+            String[] phraseJaden = phrase.split(" ");
+            for (int i = 0; i < phraseJaden.length; i++) {
+                phraseJaden[i] = phraseJaden[i].substring(0, 1).toUpperCase() + phraseJaden[i].substring(1);
             }
-        }
-        result = s2;
-
+            result = String.join(" ", phraseJaden);
+        } else
+            return null;
         return result;
     }
 }

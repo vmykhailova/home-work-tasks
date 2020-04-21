@@ -8,6 +8,8 @@ public class MainConverter {
         try {
             IConverter converter = converterFactory.createConverter(ConverterType.CELSIUSTOFAHRENHEIT);
             System.out.println(converter.doubleConvert(-10.0));
+        } catch (ConverterCalculationException e){
+            System.out.println("Value must bee more then 0");
         } catch (ConverterNotExistsException exception){
             System.out.println("No such converter");
         }
